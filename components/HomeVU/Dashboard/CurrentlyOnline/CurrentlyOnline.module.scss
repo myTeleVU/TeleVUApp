@@ -1,0 +1,44 @@
+@import '/src/styles/base.scss';
+
+.noUsers {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    font-size: 15px;
+    color: $color-black;
+  }
+
+  &__type {
+    font-size: 13px;
+    color: $color-dark-gray;
+  }
+
+  &__callButton {
+    width: 236px;
+    border-color: $color-success;
+    background-color: $color-success;
+    color: $color-white;
+    text-transform: capitalize;
+    &:hover {
+      color: $color-success;
+      border-color: $color-success;
+      background-color: $color-white;
+    }
+  }
+}

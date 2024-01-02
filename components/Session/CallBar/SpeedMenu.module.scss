@@ -1,0 +1,41 @@
+.active {
+  color: #f50057;
+}
+
+.expandSpeed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: white;
+  display: flex;
+  background-color: #333333;
+  color: white;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    row-gap: 1em;
+  }
+
+  &__itemHeader {
+    font-weight: bold;
+
+    &--audio {
+      color: #ffaf03;
+    }
+
+    &--video {
+      color: #f50057;
+    }
+  }
+}

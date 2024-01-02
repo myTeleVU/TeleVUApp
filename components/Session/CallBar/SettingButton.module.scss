@@ -1,0 +1,22 @@
+.settingButtonColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.settingButtonRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.roundIcon {
+  width: 50px;
+  color: #e9e9e9;
+}

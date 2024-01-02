@@ -1,0 +1,86 @@
+@import '/src/styles/base.scss';
+
+.thumbnailsAndLayouts {
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+  background-color: $color-dark-teal;
+  border-radius: 5px;
+  max-height: calc(100vh - 100px);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 5px;
+  }
+
+  &__layouts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 8px;
+
+    @include xs {
+      display: flex;
+    }
+  }
+
+  &__button {
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__thumbnails {
+    max-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+
+    @include xs {
+      flex-direction: row;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    @include md {
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+  }
+}
+
+.controls {
+  background-color: #777777;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}

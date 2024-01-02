@@ -1,0 +1,13 @@
+@import '/src/styles/base.scss';
+@import '/src/styles/mixins.scss';
+
+li {
+    float: left;
+  }
+  
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #d6afaf;
+}

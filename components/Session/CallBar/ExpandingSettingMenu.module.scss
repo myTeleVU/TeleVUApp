@@ -1,0 +1,18 @@
+.mainButton {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+.expandBar {
+  width: 85%;
+  z-index: 1001;
+  background: white;
+  display: flex;
+  background-color: #333333;
+  border-radius: 5px;
+  flex-direction: column;
+  margin-top: 10px;
+}

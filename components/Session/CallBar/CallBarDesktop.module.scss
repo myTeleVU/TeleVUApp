@@ -1,0 +1,85 @@
+@import '/src/styles/base.scss';
+@import '/src/styles/mixins.scss';
+
+.sessionHeader {
+  display: flex;
+  background-color: $color-dark-teal;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include xs {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0;
+  }
+  @include between-sm-and-md {
+    flex-direction: row;
+    padding: 8px;
+  }
+  @include lg {
+    padding: 10px;
+    height: 8vh;
+  }
+
+  &__callLogo {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-height: 80px;
+
+    @include xs {
+      max-width: 175px;
+    }
+    @include sm {
+      max-width: 200px;
+    }
+    @include md {
+      max-width: 250px;
+    }
+    @include lg {
+      max-width: 265px;
+    }
+    @include xl {
+      max-width: 350px;
+      padding: 5px;
+    }
+  }
+}
+
+.callBarGroup {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+
+  @include lg {
+    gap: 20px;
+  }
+}
+
+.activeButton {
+  color: $color-gold;
+}
+
+.endCall {
+  background-color: $color-gold;
+  color: $color-black;
+  text-transform: capitalize;
+
+  @include xs {
+    width: 80px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  @include sm {
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+.endCall:hover {
+  background-color: $color-black;
+  color: $color-gold;
+}

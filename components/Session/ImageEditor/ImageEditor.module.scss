@@ -1,0 +1,38 @@
+@import '/src/styles/base.scss';
+
+.imageEditor {
+  height: 85vh;
+  width: 80vw;
+  background-color: $color-dark-teal;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  &__logo {
+    img {
+      height: 50px;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: bold;
+  }
+
+  &__buttons {
+    display: flex;
+
+    &--settingButtonColumn {
+      margin-right: 25px;
+    }
+
+    &--yellow button {
+      color: $color-gold;
+    }
+  }
+}

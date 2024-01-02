@@ -1,0 +1,138 @@
+@import '/src/styles/base.scss';
+
+.container {
+  width: 100%;
+  max-height: 415px;
+  overflow-y: auto;
+}
+
+.call {
+  width: 100%;
+  padding: 10px;
+  box-shadow: none;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+  &__actions {
+    margin-top: 20px;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .MuiAccordionSummary-content {
+      justify-content: space-between;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 16px;
+    color: $color-light-blue;
+  }
+
+  &__portalName {
+    font-size: 13px;
+    color: $color-dark-gray;
+  }
+
+  &__date {
+    font-size: 15px;
+    color: $color-black;
+  }
+
+  &__btn {
+    width: 236px;
+    text-transform: capitalize;
+    &__active {
+      width: 236px;
+      text-transform: capitalize;
+      border-color: $color-success;
+      background-color: $color-success;
+      color: $color-white;
+      text-transform: capitalize;
+      &:hover {
+        color: $color-success;
+        border-color: $color-success;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+.invitees {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 15px;
+    font-weight: bold;
+    color: $color-light-blue;
+  }
+
+  &__subTitle {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  &__item {
+    font-size: 13px;
+  }
+}
+
+.editButton {
+  text-transform: capitalize;
+  width: 118px;
+  height: 34px;
+  border-color: $color-light-blue;
+  background-color: $color-white;
+  color: $color-light-blue;
+  margin-right: 10px;
+  &:hover {
+    color: $color-white;
+    background-color: $color-light-blue;
+    border-color: $color-light-blue;
+  }
+
+  &__RTL {
+    margin-left: 10px;
+    span {
+      margin-right: 5px;
+    }
+  }
+
+  &__LTR {
+    margin-right: 10px;
+  }
+}
+
+.deleteButton {
+  text-transform: capitalize;
+  width: 118px;
+  height: 34px;
+  border-color: $color-error;
+  background-color: $color-error;
+  color: $color-white;
+  &:hover {
+    color: $color-error;
+    background-color: $color-white;
+    border-color: $color-error;
+  }
+
+  &__RTL {
+    span {
+      margin-right: px;
+    }
+  }
+}

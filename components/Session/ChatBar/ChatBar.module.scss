@@ -1,0 +1,98 @@
+@import '/src/styles/base.scss';
+
+.chatBar {
+  min-width: 300px;
+  width: 15vw;
+  height: 100%;
+  border-radius: 6px;
+
+  &__body {
+    border: 1px solid black;
+    position: relative;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-dark-teal;
+    color: $color-white;
+    padding: 10px;
+    font-size: 1.5em;
+
+    .settingButtonColumn button {
+      color: $color-gold;
+    }
+
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow: auto;
+    padding: 10px;
+    flex-grow: 1;
+
+    &--blue {
+      background-color: #3494b6;
+      color: white;
+      float: right;
+      align-self: flex-end;
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    &--grey {
+      background-color: #bebfc1;
+      color: white;
+      float: left;
+      align-self: flex-start;
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.interactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $color-dark-teal;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+
+  &__input {
+    border-radius: 5px;
+    height: 50px;
+    width: 75%;
+  }
+}
+
+button {
+  background-color: #3494b6;
+  color: white;
+}

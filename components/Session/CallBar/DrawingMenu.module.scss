@@ -1,0 +1,27 @@
+@import '/src/styles/base.scss';
+@import '/src/styles/mixins.scss';
+
+.activeButton {
+  color: $color-gold;
+}
+
+.palette {
+  position: absolute;
+  top: calc(100% + 20px);
+  right: 0;
+  z-index: 10;
+  display: flex;
+  background-color: #333333;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+
+  &__button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: none;
+  }
+}
