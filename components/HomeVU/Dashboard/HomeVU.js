@@ -1,9 +1,8 @@
 import React from 'react';
 import {CurrentlyOnline} from './CurrentlyOnline/CurrentlyOnline.component';
-import UpcomingCalls from './UpcomingCalls/UpcomingCalls.component';
-import PastCalls from './PastCalls/PastCalls.component';
-import FilesAndRecordings from './FilesAndRecordings/FilesAndRecordings.components';
-import NavBar from '../../NavBar/NavBar.component';
+import {UpcomingCalls} from './UpcomingCalls/UpcomingCalls.component';
+import {PastCalls} from './PastCalls/PastCalls.component';
+import {FilesAndRecordings} from './FilesAndRecordings/FilesAndRecordings.components';
 
 export default function HomeVU() {
     return (
@@ -16,7 +15,7 @@ export default function HomeVU() {
             <UpcomingCalls />
             <PastCalls />
             <FilesAndRecordings />
-            <NavBar/>
+            
         </section>
     )
 

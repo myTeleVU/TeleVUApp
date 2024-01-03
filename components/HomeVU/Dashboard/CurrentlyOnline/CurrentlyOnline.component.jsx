@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react'
 import { Typography, Box, Button } from '@mui/material'
-import { CurrentPortalContext } from '../../../../context/Shared/CurrentPortal.context'
-import { CurrentUserContext } from '../../../../context/Shared/CurrentUser.context'
+import { CurrentPortalContext } from '../../context/Shared/CurrentPortal.context'
+import { CurrentUserContext } from '../../context/Shared/CurrentUser.context'
 import { useTranslation } from 'react-i18next'
-import { deviceTypes } from '../../../../utils/constants'
+import { deviceTypes } from '../../utils/constants'
 
 import styles from './CurrentlyOnline.module.scss'
 

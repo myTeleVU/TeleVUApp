@@ -3,7 +3,7 @@ import { Typography, Box, IconButton, Button } from '@mui/material'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import TipModal from '../TipModal/TipModal.component'
-import { HomeVUContext } from '../../../../context/HomeVU/HomeVU.context'
+import { HomeVUContext } from '../../context/HomeVU/HomeVU.context'
 
 import styles from './DidYouKnow.module.scss'
 

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react'
-import { CurrentPortalContext } from '../../../../context/Shared/CurrentPortal.context'
-import { HomeVUContext } from '../../../../context/HomeVU/HomeVU.context'
+import { CurrentPortalContext } from '../../context/Shared/CurrentPortal.context'
+import { HomeVUContext } from '../../context/HomeVU/HomeVU.context'
 import { Typography, Box, IconButton, Modal } from '@mui/material'
-import VideoViewer from '../../../FileVU/VideoViewer/VideoViewer.component'
+import VideoViewer from '../FileVU/VideoViewer/VideoViewer.component'
 import { useTranslation } from 'react-i18next'
-import { trackEvent, formatFileSize } from '../../../../utils/functions'
+import { trackEvent, formatFileSize } from '../../utils/functions'
 import { BiFileBlank } from 'react-icons/bi'
 import { BsCloudDownload, BsEyeFill } from 'react-icons/bs'
 

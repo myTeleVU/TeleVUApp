@@ -10,9 +10,9 @@ import {
 import { MdDeleteOutline } from 'react-icons/md'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import QRCode from 'qrcode.react'
-import { CurrentPortalContext } from '../../../../context/Shared/CurrentPortal.context'
-import { HomeVUContext } from '../../../../context/HomeVU/HomeVU.context'
-import { CurrentUserContext } from '../../../../context/Shared/CurrentUser.context'
+import { CurrentPortalContext } from '../../context/Shared/CurrentPortal.context'
+import { HomeVUContext } from '../../context/HomeVU/HomeVU.context'
+import { CurrentUserContext } from '../../context/Shared/CurrentUser.context'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
-import { getModalStyle } from '../../../../utils/functions'
+import { getModalStyle } from '../../utils/functions'
 
 import {
   Modal,

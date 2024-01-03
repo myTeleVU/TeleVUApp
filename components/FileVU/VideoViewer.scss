@@ -1,0 +1,23 @@
+.file {
+  margin-bottom: 10px;
+}
+
+.vieoViewer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__actions {
+    display: flex;
+    .buttonColor {
+      margin: 10px;
+    }
+  }
+  &__imageEditor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
