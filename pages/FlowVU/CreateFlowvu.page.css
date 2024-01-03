@@ -1,0 +1,18 @@
+.no-outline {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  display: block;
+  width: 30rem;
+  font-size: 1.25em;
+  color: #646464;
+}
+
+.no-outline::placeholder {
+  color: #8a8b8c;
+}
+
+.no-outline:focus {
+  outline: none;
+  border-bottom: #3594b6 2px solid;
+}

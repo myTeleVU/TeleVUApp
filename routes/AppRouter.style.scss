@@ -1,0 +1,25 @@
+@import '/src/styles/base.scss';
+
+.routesContainerSideBarLeft {
+  margin-left: $drawer-width;
+  min-height: 93vh;
+  background-image: $wave-background;
+  @include xs {
+    display: none;
+  }
+  @include md {
+    display: block;
+  }
+}
+
+.routesContainerSidebarRight {
+  margin-right: $drawer-width;
+  min-height: 93vh;
+  background-image: url('~/public/assets/pngs/TechBG.png');
+  @include xs {
+    display: none;
+  }
+  @include md {
+    display: block;
+  }
+}

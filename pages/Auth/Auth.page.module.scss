@@ -1,0 +1,94 @@
+@import '/src/styles/base.scss';
+
+.leftPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  @include xs {
+    width: 100vw;
+  }
+  @include md {
+    width: 100%;
+  }
+}
+
+.signInBox {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  &__loginBtn {
+    color: #3594b6;
+    background-color: white;
+    text-transform: capitalize;
+    &:hover {
+      background-color: $color-light-blue;
+      color: white;
+    }
+  }
+}
+
+.logoEye {
+  height: 60px;
+  margin-bottom: 35px;
+  object-fit: contain;
+}
+
+.signInFooter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  &__btn {
+    color: #5a565c;
+    margin-right: 30px;
+    text-transform: capitalize;
+  }
+}
+
+.reserved {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    color: #8a8b8c;
+    font-size: 12px;
+  }
+}
+
+.rightPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-light-blue;
+  height: 100%;
+  @include xs {
+    width: 100vw;
+  }
+  @include md {
+    width: 100%;
+  }
+}
+
+.language {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  color: white;
+  margin-top: 20px;
+}
+
+.logoWhite {
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 60px;
+    object-fit: contain;
+  }
+}
+
+.signIn {
+  height: 100vh;
+}
