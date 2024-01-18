@@ -1,0 +1,75 @@
+@import '/src/styles/base.scss';
+
+.nickName {
+  background-color: #f8f8f8;
+  color: #777777;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+.name {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-left: 0px;
+  font-size: 0.8rem;
+  top: 5px;
+  left: 8px;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.recording {
+  position: absolute;
+  color: white;
+  z-index: 50;
+  font-size: 25px;
+  top: 25px;
+  left: 5px;
+  background: $color-error;
+  opacity: 0.75;
+  max-height: 90vh;
+}
+
+.canvasWrapSubscriber {
+  position: relative;
+  width: 100%;
+}
+
+.canvasWrap .logo {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 50;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  width: auto;
+  opacity: 0.75;
+}
+
+.canvasWrap {
+  position: relative;
+}
+
+.streamIndexBox {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  top: 25px;
+  left: 25px;
+  width: 125px;
+  height: 125px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 3px;
+  color: white;
+  h5 {
+    font-size: 4rem;
+  }
+}

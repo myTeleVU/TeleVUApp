@@ -2,7 +2,8 @@
 @import '../../../styles/variables.scss';
 
 .chatBar {
-  width: 100%;
+  min-width: 300px;
+  width: 15vw;
   height: 100%;
   border-radius: 6px;
 
@@ -67,7 +68,7 @@
       color: white;
       float: left;
       align-self: flex-start;
-      width:100%;
+      width: 200px;
       border-radius: 5px;
     }
 
@@ -86,10 +87,9 @@
   border-radius: 0 0 5px 5px;
 
   &__input {
-    background-color: $color-white;
     border-radius: 5px;
     height: 50px;
-    width: 100%;
+    width: 75%;
   }
 }
 

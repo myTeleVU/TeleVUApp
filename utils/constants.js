@@ -3,7 +3,6 @@ import { RiLayoutLeftLine, RiLayoutGridFill } from 'react-icons/ri'
 import { TfiLayoutSlider } from 'react-icons/tfi'
 import { TbLayout } from 'react-icons/tb'
 import { theme } from '../styles/theme.style'
-import { routify } from './functions'
 
 const objectFlip = (obj) => {
   const ret = {}
@@ -12,6 +11,8 @@ const objectFlip = (obj) => {
   })
   return ret
 }
+
+const routify = (str) => str.toLowerCase().replace(' ', '-')
 
 const pathNameMapInitial = {}
 pathNameMapInitial['/' + routify(theme.HOMEVU)] = theme.HOMEVU
