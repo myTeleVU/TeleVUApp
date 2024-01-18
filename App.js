@@ -4,8 +4,12 @@ import NavBar from './components/NavBar/NavBar'
 
 export default function App() {
   return (
-    
+    <View>
       <NavBar/>
+      <Text >
+        test
+        </Text>
+        </View>
     
   );
 }
