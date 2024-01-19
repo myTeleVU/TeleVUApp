@@ -1,6 +1,6 @@
 import React, { createContext, useState, useCallback, useEffect } from 'react'
 import UserService from '../../services/User/User.service'
-//import { Auth } from 'aws-amplify'
+import { Auth } from 'aws-amplify'
 import PropTypes from 'prop-types'
 
 export const CurrentUserContext = createContext()
