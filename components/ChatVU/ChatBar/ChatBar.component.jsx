@@ -1,10 +1,14 @@
 import React, { useContext, useState, useCallback } from 'react'
-import { View, Text, FlatList, TextInput } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import { ListItem } from 'react-native-elements'
+import { Input } from '@mui/material'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
+import { FiSend } from 'react-icons/fi'
+import { MdCancel } from 'react-icons/md'
 //import { CurrentUserContext } from '../../../context/Shared/CurrentUser.context'
-//import SettingButton from '../CallBar/SettingButton.component'
+import { trackEvent } from '../../../utils/functions'
+import SettingButton from '../CallBar/SettingButton.component'
 
 import styles from './ChatBar.module.scss'
 
@@ -13,13 +17,12 @@ import styles from './ChatBar.module.scss'
 export const ChatBar = () => {
   const [message, setMessage] = useState('')
   const [chat, setChat] = useState(true)
-  const [messages, setMessages] = useState([
+  const [messageHistory, setMessageHistory] = useState([
     { from: 'Adam', message: 'Hello' },
     { from: 'Eden', message: 'Hello!' },
     { from: 'Eden', message: 'How are you' },
     { from: 'Adam', message: 'Good! How about you?' },
   ])
-  
   const { t } = useTranslation()
   //const { me } = useContext(CurrentUserContext)
 
@@ -28,7 +31,7 @@ export const ChatBar = () => {
   }, [chat])
 
   const sendMessage = (newMessage) => {
-      setMessages((prevMessages) => 
+      setMessageHistory((prevMessages) => 
         [...prevMessages, {from: "Adam", message: newMessage}]
       )
   };  
@@ -47,16 +50,20 @@ export const ChatBar = () => {
 
   return (
     chat && (
-      <View>
       <View className={styles.chatBar}>
         <View className={styles.chatBar__body}>
           <View className={styles.chatBar__header}>
-            <View><Text>{t('Chat')}</Text></View>
-            
+            <View>{t('Chat')}</View>
+            <SettingButton
+              displayText={t('Close')}
+              buttonAction={() => toggleChat()}
+              buttonOffIcon={<MdCancel />}
+              column={true}
+            />
           </View>
           <View className={styles.chatBar__messages}>
             <FlatList
-              data={messages}
+              data={messageHistory}
               keyExtractor={(item, index) => index.toString()}
               renderItem={({ item, index }) => (
                 <ListItem
@@ -67,28 +74,33 @@ export const ChatBar = () => {
                   ]}
                 >
                   <ListItem.Content>
-                    <Text>
-                      {item.from}:
-                      {'\n'}
+                    <Text>{item.from}:
+                      {"\n"}
                       {item.message}
-                    </Text>    
+                    </Text>
                   </ListItem.Content>
                 </ListItem>
               )}
             />
           </View>
-          
-        </View>
-      </View>
-      <View className={styles.interactions}>
-            <TextInput
+          <View className={styles.interactions}>
+            <Input
               id="standard-basic"
-              style={styles.interactions__input}
-              placeholder={t('Write a message')}
+              className={styles.interactions__input}
+              label={t('Write a message')}
               value={message}
-              onChangeText={(event) => setMessage(event.target.value)}
+              onChange={(event) => setMessage(event.target.value)}
+              onKeyPress={handleKeyPress}
+              sx={{ backgroundColor: 'white' }}
+            />
+            <SettingButton
+              displayText={t('Send')}
+              buttonAction={() => sendChat()}
+              buttonOffIcon={<FiSend />}
+              column={true}
             />
           </View>
+        </View>
       </View>
     )
   )
@@ -96,7 +108,7 @@ export const ChatBar = () => {
 
 ChatBar.propTypes = {
   chat: PropTypes.bool,
-  messages: PropTypes.array,
+  messageHistory: PropTypes.array,
   sendMessage: PropTypes.func,
   toggleChat: PropTypes.func
 }

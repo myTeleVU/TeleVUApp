@@ -1,4 +1,4 @@
-import { Auth } from 'aws-amplify'
+//import { Auth } from 'aws-amplify'
 import moment from 'moment'
 import { pathNameMap } from './constants'
 import { theme } from '../styles/theme.style'
@@ -14,6 +14,7 @@ export const getModalStyle = () => {
   }
 }
 
+/*
 export const getJWT = async () => {
   return Auth.currentSession().then((res) => {
     const getIdToken = res.getIdToken()
@@ -21,6 +22,7 @@ export const getJWT = async () => {
     return jwt
   })
 }
+*/
 
 export const getSummaryAnalyticsGraph = (summaryAnalytics) => {
   const labels = []

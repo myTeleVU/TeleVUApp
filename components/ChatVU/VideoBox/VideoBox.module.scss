@@ -1,0 +1,182 @@
+@import '/src/styles/base.scss';
+
+.videoBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  background-color: $color-black;
+  overflow: hidden;
+
+  @include xs {
+    justify-content: space-between;
+  }
+
+  @include sm {
+    justify-content: center;
+  }
+
+  &__videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90%;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+
+    @include xs {
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: #{$screen-xs-min}) and (orientation:portrait) {
+      margin-top: 10px;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: #{$screen-xs-min}) and (orientation:landscape) {
+      flex-direction: row;
+    }
+  }
+
+  &__mainStreams {
+    width: 100%;
+
+    @include xs {
+      height: 100%;
+    }
+
+    @include md {
+      height: 90vh;
+    }
+  }
+
+  &__expandThumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    @include xs {
+      width: 150px;
+      height: 25px;
+      margin-bottom: -15px;
+      margin-top: 10px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    @include md {
+      height: 150px;
+      width: 25px;
+      margin-left: -20px;
+      margin-right: 10px;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.thumbnailsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out,
+    visibility 0.4s ease-in-out, max-width 0.4s ease-in-out;
+
+  @include xs {
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+
+  @include md {
+    max-width: 300px;
+    margin-right: 10px;
+    height: 100%;
+  }
+}
+
+.thumbnailsBoxRTL {
+  @include sm {
+    margin-right: 0px !important;
+    margin-left: 30px !important;
+  }
+}
+
+.thumbnailsBoxVideos {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  @media (min-width: #{$screen-xs-min}) and (orientation:portrait) {
+    flex-direction: row;
+  }
+
+  @media (min-width: #{$screen-xs-min}) and (orientation:landscape) {
+    flex-direction: column;
+  }
+
+  @include md {
+    flex-direction: column;
+  }
+}
+
+.thumbnail {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.layout {
+  &-FULLSCREEN {
+    display: flex;
+  }
+
+  &-FOUR_BY_FOUR {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-gap: 10px;
+  }
+
+  &-TWO_WINDOW_MD {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &-THREE_WINDOW_MD {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 7fr;
+    grid-template-areas:
+      'first second'
+      'third second';
+
+    > :first-child {
+      grid-area: first;
+    }
+
+    > :nth-child(2) {
+      grid-area: third;
+    }
+
+    > :nth-child(3) {
+      grid-area: second;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 90vh;
+  // max-width: 300px;
+
+  @include md {
+    max-width: 300px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  max-width: 0;
+}
